@@ -19,9 +19,11 @@ BASE_APP = [
 
 LOCAL_APP = []
 
-THIRD_APPS = []
+THIRD_APPS = [
+    "daphne",
+]
 
-INSTALLED_APPS = BASE_APP + LOCAL_APP + THIRD_APPS
+INSTALLED_APPS = THIRD_APPS + BASE_APP + LOCAL_APP
 
 # ----------------------------------------------------------
 
@@ -81,6 +83,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # ----------------------------------------------------------
 
 WSGI_APPLICATION = "core.wsgi.application"
+
+ASGI_APPLICATION = "core.asgi.application"
 
 LANGUAGE_CODE = "en-us"
 
